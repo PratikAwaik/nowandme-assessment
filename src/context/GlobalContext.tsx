@@ -1,8 +1,14 @@
 import { createContext, useContext, useState } from "react";
 
-interface GlobalContextProps {
+interface GlobalContextState {
   isInitialRender: boolean;
-  toggleInitialRender: () => void;
+  isLoginView: boolean;
+  showModal: boolean;
+}
+
+interface GlobalContextProps {
+  state: GlobalContextState;
+  updateState: (updates: Partial<GlobalContextState>) => void;
 }
 
 interface GlobalContextProviderProps {
@@ -10,8 +16,12 @@ interface GlobalContextProviderProps {
 }
 
 const initialState = {
-  isInitialRender: true,
-  toggleInitialRender: () => {},
+  state: {
+    isInitialRender: true,
+    isLoginView: true,
+    showModal: false,
+  },
+  updateState: () => {},
 };
 
 const GlobalContext = createContext<GlobalContextProps>(initialState);
@@ -19,16 +29,15 @@ const GlobalContext = createContext<GlobalContextProps>(initialState);
 export const GlobalContextProvider = ({
   children,
 }: GlobalContextProviderProps) => {
-  const [isInitialRender, setIsInitialRender] = useState(
-    initialState.isInitialRender
-  );
+  const [state, setState] = useState(initialState.state);
 
-  const toggleInitialRender = () => {
-    setIsInitialRender(!isInitialRender);
+  const updateState = (updates: Partial<GlobalContextState>) => {
+    const updatedState = { ...state, ...updates } as GlobalContextState;
+    setState(updatedState);
   };
 
   return (
-    <GlobalContext.Provider value={{ isInitialRender, toggleInitialRender }}>
+    <GlobalContext.Provider value={{ state, updateState }}>
       {children}
     </GlobalContext.Provider>
   );

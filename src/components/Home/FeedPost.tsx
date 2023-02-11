@@ -1,4 +1,5 @@
 import commentsIcon from "../../assets/icons/comments.svg";
+import { useGlobalContext } from "../../context/GlobalContext";
 import { IPost } from "../../models/post";
 
 interface FeedPostProps {
@@ -6,8 +7,12 @@ interface FeedPostProps {
 }
 
 export default function FeedPost({ post }: FeedPostProps) {
+  const { updateState } = useGlobalContext();
   return (
-    <div className="py-6 px-5 border-2 border-theme-black-500 rounded-lg bg-theme-black-600 mb-4">
+    <div
+      className="py-6 px-5 border-2 border-theme-black-500 rounded-lg bg-theme-black-600 mb-4 cursor-pointer"
+      onClick={() => updateState({ showModal: true })}
+    >
       <div>
         <div className="flex items-center justify-between mb-5">
           <div className="flex items-center">

@@ -1,8 +1,16 @@
+import { useGlobalContext } from "../../context/GlobalContext";
 import { posts } from "../../data/posts";
+import Login from "../Auth/Login";
+import Register from "../Auth/Register";
+import Modal from "../Utils/Modal";
 import CreatePost from "./CreatePost";
 import FeedPost from "./FeedPost";
 
 export default function Feed() {
+  const {
+    state: { isLoginView, showModal },
+  } = useGlobalContext();
+
   return (
     <div className="max-w-3xl mx-auto">
       <h2 className="font-medium text-[1.75rem] mb-3 text-theme-gray-700">
@@ -16,6 +24,9 @@ export default function Feed() {
       {posts.map((post, idx) => (
         <FeedPost key={idx} post={post} />
       ))}
+      <Modal show={showModal}>
+        <div>{isLoginView ? <Login /> : <Register />}</div>
+      </Modal>
     </div>
   );
 }

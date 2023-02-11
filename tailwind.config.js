@@ -19,6 +19,9 @@ module.exports = {
         "theme-gradient":
           "linear-gradient(0deg, #27292d, #27292d), linear-gradient(129.59deg, #969696 0%, #343434 98.18%)",
       },
+      backdropBlur: {
+        xs: "2px",
+      },
     },
   },
   plugins: [],

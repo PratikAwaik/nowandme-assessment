@@ -1,6 +1,12 @@
+import { useGlobalContext } from "../../context/GlobalContext";
+
 export default function CreatePost() {
+  const { updateState } = useGlobalContext();
   return (
-    <div className="py-6 px-5 bg-theme-gradient border-2 border-theme-black-500 rounded-lg mb-4">
+    <div
+      className="py-6 px-5 bg-theme-gradient border-2 border-theme-black-500 rounded-lg mb-4 cursor-pointer"
+      onClick={() => updateState({ showModal: true })}
+    >
       <h6 className="font-medium text-lg text-theme-gray-700 mb-4">
         Create post
       </h6>
