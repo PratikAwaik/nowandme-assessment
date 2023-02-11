@@ -12,6 +12,12 @@ module.exports = {
         "theme-gray-500": "#7F8084",
         "theme-blue": "#4A96FF",
       },
+      backgroundImage: {
+        "theme-gradient-border":
+          "linear-gradient(129.59deg, #969696 0%, #343434 98.18%)",
+        "theme-gradient":
+          "linear-gradient(0deg, #27292d, #27292d), linear-gradient(129.59deg, #969696 0%, #343434 98.18%)",
+      },
     },
   },
   plugins: [],
