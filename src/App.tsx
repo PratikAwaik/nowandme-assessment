@@ -8,7 +8,7 @@ function App() {
     state: { isInitialRender, isLoginView },
   } = useGlobalContext();
   return (
-    <div className="App w-screen h-screen bg-theme-black-700 overflow-hidden">
+    <div className="App w-screen h-screen bg-theme-black-700 overflow-x-hidden overflow-y-auto py-2 px-4">
       <div className="w-full h-full flex items-center justify-center">
         {isInitialRender && isLoginView && <Login />}
         {isInitialRender && !isLoginView && <Register />}

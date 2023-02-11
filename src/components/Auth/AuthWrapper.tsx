@@ -30,7 +30,7 @@ export default function AuthWrapper({
   };
 
   return (
-    <div className="bg-theme-gradient-border rounded-lg p-0.5 w-fit relative">
+    <div className="bg-theme-gradient-border rounded-lg p-0.5 max-w-fit relative">
       <div className="bg-theme-gradient py-10 px-6 w-fit rounded-lg">
         <form>
           <p className="font-medium text-sm text-theme-gray-600 mb-2 uppercase text-center">

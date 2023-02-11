@@ -1,10 +1,9 @@
-import { useGlobalContext } from "../../context/GlobalContext";
-import { posts } from "../../data/posts";
 import Login from "../Auth/Login";
 import Register from "../Auth/Register";
 import Modal from "../Utils/Modal";
-import CreatePost from "./CreatePost";
 import FeedPost from "./FeedPost";
+import { useGlobalContext } from "../../context/GlobalContext";
+import { posts } from "../../data/posts";
 
 export default function Feed() {
   const {
@@ -20,7 +19,7 @@ export default function Feed() {
         How are you doing today? Would you like to share something with the
         community 🤗
       </p>
-      <CreatePost />
+      <FeedPost isCreatePost />
       {posts.map((post, idx) => (
         <FeedPost key={idx} post={post} />
       ))}
