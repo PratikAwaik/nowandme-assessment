@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/nowandme-assessment/static/css/main.f7e18739.css",
+    "main.js": "/nowandme-assessment/static/js/main.6ee033a2.js",
+    "static/js/787.18d057af.chunk.js": "/nowandme-assessment/static/js/787.18d057af.chunk.js",
+    "static/media/eye.svg": "/nowandme-assessment/static/media/eye.1f5c3ba43e6b1929090a5d82ff5f7f3b.svg",
+    "static/media/comments.svg": "/nowandme-assessment/static/media/comments.741ff533d5b619f4b70db7200f9c3217.svg",
+    "index.html": "/nowandme-assessment/index.html",
+    "main.f7e18739.css.map": "/nowandme-assessment/static/css/main.f7e18739.css.map",
+    "main.6ee033a2.js.map": "/nowandme-assessment/static/js/main.6ee033a2.js.map",
+    "787.18d057af.chunk.js.map": "/nowandme-assessment/static/js/787.18d057af.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7e18739.css",
+    "static/js/main.6ee033a2.js"
+  ]
+}
