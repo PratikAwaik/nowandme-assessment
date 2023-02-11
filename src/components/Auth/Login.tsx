@@ -1,6 +1,9 @@
 import eyeIcon from "../../assets/icons/eye.svg";
+import { useGlobalContext } from "../../context/GlobalContext";
 
 export default function Login() {
+  const { toggleInitialRender } = useGlobalContext();
+
   return (
     <div className="bg-theme-gradient-border rounded-lg p-0.5">
       <div className="bg-theme-gradient py-10 px-6 w-fit rounded-lg">
@@ -42,6 +45,7 @@ export default function Login() {
           <button
             className="w-full p-3 flex items-center justify-center bg-theme-blue rounded font-medium text-white mb-3"
             type="button"
+            onClick={toggleInitialRender}
           >
             Login now
           </button>
